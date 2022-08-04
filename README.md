@@ -1,2 +1,0 @@
-# G-Portfolio
-New Portfolio 
