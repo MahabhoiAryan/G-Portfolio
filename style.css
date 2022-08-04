@@ -552,6 +552,13 @@ nav .fas{
       flex-basis: 100%;
   }
 
+  .sub-title{
+    margin-top: 3rem;
+    font-size: 50px;
+    font-weight: 600;
+    color: #ebe8e8;
+  }
+
   .subtitle-info{
       font-size: 35px;
   }
@@ -618,6 +625,7 @@ nav .fas{
   
   .copyright p{
       font-size: 22px;
+      font-weight: 600;
       font-family: 'Times New Roman', Times, serif;
   }
 
