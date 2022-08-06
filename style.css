@@ -465,7 +465,7 @@ nav .fas{
 
 /* ---Media Queries----- */
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px) {
  #header{
   background-image: url(./images/background.jpg);
   background-size: cover;
@@ -473,7 +473,7 @@ nav .fas{
 
  .hello{
   font-size: 1.5rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
  }
 
  .header-text{
@@ -481,12 +481,12 @@ nav .fas{
  }
 
  .header-text h1{
-  font-size: 40px;
+  font-size: 37px;
   margin-bottom: 2rem;
  }
 
  .carier{
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-top: 2.1rem;
   font-weight: 550;
   line-height: 1.7;
