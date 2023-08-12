@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 *{
   margin: 0;
   padding: 0;
@@ -17,7 +18,7 @@ body {
 #header{
   width: 100%;
   height:100vh;
-  background-image: url(images/background.jpg);
+  background-image: url(images/background-1.png);
   background-size: cover;
   background-position: fixed;
 }
@@ -28,29 +29,22 @@ body {
 
 nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items:center;
   flex-wrap: wrap;
-  /* z-index: 999;
-  position: fixed;
-  background: rgba(24, 24, 24, 0.8);
+  background: rgba(0, 0, 0, 0.389);  
   top: 0;
   left: 0;
   width: 100%;
- 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  transition: 0.5s ease; */
-}
-
-.nav-brand{
-  margin-top: 12px;
+  height: 70px;
+  position: fixed;
+  z-index: 999;
+  transition: 0.5s ease;
 }
 
 .logo{
-  width: 120px;
+  width: 110px;
+  margin-right: 12rem;
 }
 
 nav ul li{
@@ -63,7 +57,7 @@ nav ul li{
 nav ul li a{
   color: #fff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
 }
 
@@ -93,41 +87,61 @@ nav ul li a:hover::after{
   margin-top: 20px;
 }
 
-.header-text h1 span{
+.mobile-head-name{
   color: #ff004f;
 }
-/* 
+
+.header-text h5{
+  margin-top: -1rem;
+  font-size: 22px;
+  font-weight: 200;
+}
+
 .head-info{
-  font-size: 14px;
-  text-align: right;
-  font-weight: 250;
-  margin-right: -2%;
-  margin-top: 6rem;
-  font-family: monospace;
+  font-size: 16px;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-family:'Poppins', sans-serif;;
   line-height: 2;
-} */
+  text-align: justify;
+  padding: 0 1rem 0 1rem;
+}
 
 .hello{
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 4px;
+  font-size: 49px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.hello-tag{
+  font-size: 40px;
+  font-weight: 290;
 }
 
 .carier{
-  line-height: 1.2;
-  font-size: 3.4rem;
-  margin-top: 10px;
+  line-height: 2;
+  font-size: 28px;
+  margin-top: 20px;
+  font-weight: 400;
+  text-shadow: #080808;
 }
 
 .car-links{ 
-  text-decoration: none;
-  color: #fff;
-  font-family: 'times new roman', serif;
+  color: #d4f9ff;
+}
+
+.orange{
+  color: orangered;
+}
+
+.geek{
+  font-size: 27px;
 }
 
 .geeks{
   text-decoration: none;
   color:#3ffd6f;
+  font-size: 22px;
 }
 
 /* scrolling */
@@ -176,8 +190,28 @@ nav ul li a:hover::after{
 
 .about-col-1 img{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
+
+.social-icon{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icon a{
+  text-decoration: none;
+  font-size: 32px;
+  margin-left: 44px;
+  color:#ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icon a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
 
 .about-col-2{
   flex-basis: 60%;
@@ -186,14 +220,16 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
+  margin-top: 20px;
   font-size: 60px;
   font-weight: 600;
   color: #fff;
 }
 
 .sub-info{
-  padding: 20px 0;
-  font-size: 22px;
+  text-align: justify;
+  padding: 13px 85px 12px 0px;
+  font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -435,7 +471,7 @@ nav ul li a:hover::after{
 
 .footer-mail{
   text-decoration: none;
-  color: rgb(211, 234, 255);
+  color: rgb(166, 177, 185);
 }
 
 .copyright{
@@ -463,6 +499,45 @@ nav .fas{
   display: none;
 }
 
+/* Loader */
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./images/background-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+#svg {
+  height: 150px;
+  width: 550px;
+  stroke: #c9d0ff;
+  fill-opacity: 0;
+  stroke-width: 2.4px;
+  stroke-dasharray: 4500;
+  animation: draw 15s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* ---Media Queries----- */
 
 @media only screen and (max-width: 600px) {
@@ -471,12 +546,26 @@ nav .fas{
   background-size: cover;
  }
 
+
+ .logo{
+  width: 140px;
+  margin-right: 2rem;
+}
+
  .hello{
   font-size: 1.5rem;
   margin-top: 8rem;
  }
 
- .header-text{
+.mobile-head-name{
+  font-size: 2.2rem;
+}
+
+.mobile-head{
+  font-size: 2rem;
+}
+
+.header-text{
   font-size: 50px;
  }
 
@@ -486,11 +575,26 @@ nav .fas{
  }
 
  .carier{
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-top: 2.1rem;
   font-weight: 550;
   line-height: 1.7;
  }
+
+ .geek{
+  font-size: 1.4rem;
+  margin-top: 2.1rem;
+  font-weight: 550;
+  line-height: 1.7;
+ }
+ 
+ .heading{
+  justify-content: space-evenly;
+ } 
+
+ .header-text h5{
+  font-size: 1rem;
+}
 
  .nav-brand{
   margin-top: 10px;
@@ -544,8 +648,13 @@ nav .fas{
    margin-bottom: 30px;
   }
 
+  .social-icon{
+    display: none;
+  }
+
   .about-col-2{
   font-size: 14px;
+  padding: 0;
   }
 
   .contact-list{
@@ -607,7 +716,7 @@ nav .fas{
   }
 
   .footer-mail{
-      font-size: 20px;
+      font-size: 19px;
   }
 
   .contact-list p i{
@@ -637,4 +746,12 @@ nav .fas{
       margin-right: 28px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  .social-icons{
+    text-align: center;
+  }
+
+  
+
+
 }
