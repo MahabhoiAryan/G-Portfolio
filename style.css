@@ -549,7 +549,7 @@ nav .fas{
 
  .logo{
   width: 140px;
-  margin-right: 2rem;
+  margin-right: 7rem;
 }
 
  .hello{
@@ -575,19 +575,33 @@ nav .fas{
  }
 
  .carier{
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 2.1rem;
-  font-weight: 550;
-  line-height: 1.7;
+  font-weight: 250;
+  line-height: 2.7;
  }
 
  .geek{
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-top: 2.1rem;
-  font-weight: 550;
-  line-height: 1.7;
+  font-weight: 250;
+  line-height: 2.7;
  }
  
+ .geeks{
+  font-size: 1rem;
+  font-weight: 350;
+  line-height: 1.7;
+ }
+
+.orange{
+  font-weight: 350;
+}
+
+.car-links{
+  font-weight: 350;
+}
+
  .heading{
   justify-content: space-evenly;
  } 
@@ -751,7 +765,9 @@ nav .fas{
     text-align: center;
   }
 
-  
+  #svg {
+    height: auto;
+    width: auto;
 
 
 }
